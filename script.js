@@ -191,10 +191,38 @@ function openSecureCloudModal() {
 }
 
 /* ── CONTACT SUBMIT ── */
-function handleSubmit(btn) {
-    btn.textContent = 'Message Sent ✓';
+function sendContactMessage(e) {
+    e.preventDefault();
+    const btn = e.target;
+    
+    // Grab details
+    let fName = document.getElementById('fname').value || '';
+    let lName = document.getElementById('lname').value || '';
+    let email = document.getElementById('email').value || '';
+    let pType = document.getElementById('ptype').value || '';
+    let pBudget = document.getElementById('pbudget').value || '';
+    let msg = document.getElementById('pmessage').value || '';
+    
+    // Construct message
+    let text = `Hello Arun, I am interested in collaborating!\n\n`;
+    text += `*Name:* ${fName} ${lName}\n`;
+    if(email) text += `*Email:* ${email}\n`;
+    if(pType !== 'Select project type...') text += `*Project Type:* ${pType}\n`;
+    if(pBudget) text += `*Budget:* ${pBudget}\n`;
+    if(msg) text += `\n*Message:* ${msg}\n`;
+    
+    let encodedText = encodeURIComponent(text);
+    
+    // Visual feedback
+    const originalText = btn.innerHTML;
+    btn.innerHTML = 'Redirecting... ✦';
     btn.style.background = 'linear-gradient(135deg, #34d399, #06b6d4)';
-    btn.disabled = true;
+    
+    setTimeout(() => {
+        btn.innerHTML = originalText;
+        btn.style.background = '';
+        window.open(`https://wa.me/917981947497?text=${encodedText}`, '_blank');
+    }, 1000);
 }
 
 /* ── TILT EFFECT ── */
