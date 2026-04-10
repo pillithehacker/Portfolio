@@ -459,33 +459,33 @@
                 <h3 style="font-family: var(--ff-head); font-weight: 700; font-size: 1.4rem; margin-bottom: 1.75rem;">
                     Send a Message</h3>
                 <div class="form-row">
-                    <div class="fg"><label>First Name</label><input type="text" id="fname" placeholder="Arun Kumar"></div>
-                    <div class="fg"><label>Last Name</label><input type="text" id="lname" placeholder="Pilli"></div>
+                    <div class="fg"><label>First Name</label><div class="input-wrap"><i class="far fa-user"></i><input type="text" id="fname" placeholder="Arun Kumar"></div></div>
+                    <div class="fg"><label>Last Name</label><div class="input-wrap"><i class="far fa-user"></i><input type="text" id="lname" placeholder="Pilli"></div></div>
                 </div>
-                <div class="fg"><label>Email Address</label><input type="email" id="email" placeholder="arunkumarpilli3@email.com"></div>
+                <div class="fg"><label>Email Address</label><div class="input-wrap"><i class="far fa-envelope"></i><input type="email" id="email" placeholder="arunkumarpilli3@email.com"></div></div>
                 <div class="fg">
                     <label>Project Type</label>
-                    <select id="ptype">
+                    <div class="input-wrap"><i class="fas fa-briefcase"></i><select id="ptype">
                         <option>Select project type...</option>
                         <option>UI/UX Design</option>
                         <option>Web Application</option>
                         <option>Cybersecurity Analysis</option>
                         <option>Cloud Infrastructure</option>
                         <option>Other</option>
-                    </select>
+                    </select></div>
                 </div>
                 <div class="fg">
                     <label>Budget Range</label>
-                    <select id="pbudget">
+                    <div class="input-wrap"><i class="fas fa-wallet"></i><select id="pbudget">
                         <option>Under ₹50k</option>
                         <option>₹50k – ₹1.5L</option>
                         <option>₹1.5L – ₹3L</option>
                         <option>₹3L+</option>
-                    </select>
+                    </select></div>
                 </div>
-                <div class="fg"><label>Message</label><textarea id="pmessage" rows="5"
-                        placeholder="Tell me about your project, goals, and timeline..."></textarea></div>
-                <button onclick="sendContactMessage(event)" class="submit-btn">Send Message ✦</button>
+                <div class="fg"><label>Message</label><div class="input-wrap align-top"><i class="far fa-comment-dots"></i><textarea id="pmessage" rows="5"
+                        placeholder="Tell me about your project, goals, and timeline..."></textarea></div></div>
+                <button onclick="sendContactMessage(event)" class="submit-btn">Send Message <i class="fas fa-paper-plane" style="font-size: 0.85em; margin-left: 4px;"></i></button>
             </div>
         </div>
     </div>
