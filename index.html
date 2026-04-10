@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arun Kumar Pilli — UI/UX Designer & Product Thinker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;600&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='80' font-family='sans-serif' font-size='80' font-weight='800' fill='%2300f0ff'>A</text></svg>">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- LOADER -->
+    <div id="loader">
+        <div
+            style="font-family: var(--ff-head); font-size: 2.5rem; font-weight: 700; background: linear-gradient(135deg, #a78bfa, #06b6d4); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
+            AK</div>
+        <div class="loader-bar">
+            <div class="loader-fill"></div>
+        </div>
+        <div class="loader-text">Loading Portfolio...</div>
+    </div>
+
+    <!-- NAV -->
+    <nav id="nav">
+        <div class="nav-logo">Arun Kumar Pilli</div>
+        <ul class="nav-links">
+            <li><a href="#hero" class="active">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="nav-right">
+
+            <a href="#contact" class="nav-hire">Hire Me</a>
+            <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#hero" onclick="toggleMenu()">Home</a>
+        <a href="#about" onclick="toggleMenu()">About</a>
+        <a href="#skills" onclick="toggleMenu()">Skills</a>
+        <a href="#projects" onclick="toggleMenu()">Projects</a>
+        <a href="#contact" onclick="toggleMenu()">Contact</a>
+    </div>
+
+    <!-- ════ HERO ════ -->
+    <section class="hero" id="hero">
+        <div class="hero-bg">
+            <div class="blob blob1"></div>
+            <div class="blob blob2"></div>
+            <div class="blob blob3"></div>
+            <div class="particles" id="particles"></div>
+        </div>
+        <div class="hero-inner">
+            <div class="hero-text">
+                <div class="hero-badge">✦ Available for freelance & full-time roles</div>
+                <h1>
+                    <div class="line"><span>Crafting</span></div>
+                    <div class="line"><span class="grad-text">Digital Experiences</span></div>
+                </h1>
+                <p class="hero-sub">UI/UX Designer & Product Thinker — crafting intuitive, human-centred experiences
+                    that look stunning and convert brilliantly.</p>
+                <div class="type-wrap">› <span id="typed"></span></div>
+                <div class="hero-btns">
+                    <a href="#projects" class="btn-glow"><span>View Projects</span></a>
+                    <a href="assets/images/resume.png" target="_blank" class="btn-outline">Download Resume ↓</a>
+                </div>
+                <div class="social-section">
+                    <span class="social-label">Connect With Me</span>
+                    <div class="hero-socials">
+                        <a href="https://www.linkedin.com/in/arunkumar-pilli" class="social-icon" target="_blank" data-tooltip="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/pillithehacker" class="social-icon" target="_blank" data-tooltip="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://www.instagram.com/arun_public" class="social-icon" target="_blank" data-tooltip="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/917981947497" class="social-icon" target="_blank" data-tooltip="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="mailto:arunkumarpilli3@email.com" class="social-icon" data-tooltip="Email"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-visual-container">
+                    <div class="profile-circle">
+                        <img src="assets/images/profile.jpeg" alt="Profile Image" class="profile-image">
+                    </div>
+                    <!-- Floating Icons -->
+                    <div class="float-icon float-canva"><i class="fas fa-palette"></i> <span>Canva</span></div>
+                    <div class="float-icon float-anti"><i class="fas fa-space-shuttle"></i> <span>Anti-Gravity</span></div>
+                    <div class="float-icon float-vscode"><i class="fas fa-code"></i> <span>VS Code</span></div>
+                    <div class="float-icon float-github"><i class="fab fa-github"></i> <span>GitHub</span></div>
+                    <!-- Moved Figma/Cursor to bottom of visual tree to appear top level -->
+                    <div class="float-icon float-figma"><i class="fab fa-figma"></i> <span>Figma</span></div>
+                    <div class="float-icon float-cursor"><i class="fas fa-terminal"></i> <span>Cursor</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee-wrap">
+        <div class="marquee-track">
+            <div class="marquee-item"><span>✦</span> UI Design</div>
+            <div class="marquee-item"><span>✦</span> UX Research</div>
+            <div class="marquee-item"><span>✦</span> Prototyping</div>
+            <div class="marquee-item"><span>✦</span> Design Systems</div>
+            <div class="marquee-item"><span>✦</span> Figma</div>
+            <div class="marquee-item"><span>✦</span> User Flows</div>
+            <div class="marquee-item"><span>✦</span> Motion Design</div>
+            <div class="marquee-item"><span>✦</span> Interaction Design</div>
+            <div class="marquee-item"><span>✦</span> Accessibility</div>
+            <div class="marquee-item"><span>✦</span> Mobile App Design</div>
+            <div class="marquee-item"><span>✦</span> UI Design</div>
+            <div class="marquee-item"><span>✦</span> UX Research</div>
+            <div class="marquee-item"><span>✦</span> Prototyping</div>
+            <div class="marquee-item"><span>✦</span> Design Systems</div>
+            <div class="marquee-item"><span>✦</span> Figma</div>
+            <div class="marquee-item"><span>✦</span> User Flows</div>
+            <div class="marquee-item"><span>✦</span> Motion Design</div>
+            <div class="marquee-item"><span>✦</span> Interaction Design</div>
+            <div class="marquee-item"><span>✦</span> Accessibility</div>
+            <div class="marquee-item"><span>✦</span> Mobile App Design</div>
+        </div>
+    </div>
+
+    <!-- ════ ABOUT ════ -->
+    <section id="about">
+        <div class="section">
+            <div class="about-grid reveal">
+                <div class="about-image-card">
+                    <img src="assets/images/profile-picture-2.jpeg" alt="Coding Workspace" class="about-profile-image">
+                </div>
+                <div class="about-content">
+                    <div class="section-label">About Me</div>
+                    <h2 class="section-title">Passionate About Creating Great User Experiences</h2>
+                    <p class="about-text">I am a passionate UI/UX Designer who enjoys creating clean, user-friendly, and
+                        visually engaging digital experiences. I focus on understanding user behavior, solving
+                        real-world problems, and designing interfaces that are both functional and attractive.</p>
+                    <p class="about-text">I enjoy working on mobile apps, websites, dashboards, and interactive products
+                        that improve the overall user experience. My goal is to combine creativity, usability, and
+                        modern design trends to create meaningful products that users love.</p>
+                    <div class="philosophy-card">
+                        <p>"I am always exploring new design ideas, trends, and tools to continuously improve my skills
+                            in UI/UX design."</p>
+                    </div>
+                    <p class="about-text">My academic journey has helped me build a strong foundation in technology,
+                        creativity, and problem-solving while exploring UI/UX design, AI tools, and user-centered
+                        digital experiences.</p>
+
+                    <div class="timeline reveal">
+                        <div class="section-label" style="margin-top: 2.5rem">Journey</div>
+                        <div class="tl-item">
+                            <div class="tl-dot"></div>
+                            <div class="tl-year">2022 – 2026</div>
+                            <div class="tl-title">B.Tech in Cybersecurity</div>
+                            <div class="tl-place">Acharya Nagarjuna University, Guntur</div>
+                            <div class="tl-desc">I have learned the basics of cybersecurity, and I have spent most of my
+                                time learning UI/UX design through YouTube channels.</div>
+                        </div>
+                        <div class="tl-item">
+                            <div class="tl-dot"></div>
+                            <div class="tl-year">2019 – 2021</div>
+                            <div class="tl-title">Intermediate (M.P.C)</div>
+                            <div class="tl-place">Sri Chaitanya Junior College, Kakinada</div>
+                            <div class="tl-desc">I scored 87.9% in my intermediate, and that was the time when I started
+                                seeing the colors of the world.</div>
+                        </div>
+                        <div class="tl-item">
+                            <div class="tl-dot"></div>
+                            <div class="tl-year">2019 – 2018</div>
+                            <div class="tl-title">10th (SSC)</div>
+                            <div class="tl-place">Vignan E.M School, Malikipuram</div>
+                            <div class="tl-desc">I scored a 10.0 GPA in my 10th grade, and that was the first time I
+                                truly felt what success feels like.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- ════ SKILLS ════ -->
+    <div class="skills-bg" id="skills">
+        <div class="section">
+            <div class="reveal">
+                <div class="section-label">Expertise</div>
+                <h2 class="section-title">Skills & Craft</h2>
+                <p class="section-desc">Every skill honed through real projects — not just tutorials. Here's what I
+                    bring to the table.</p>
+            </div>
+            <div class="skills-grid reveal">
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fas fa-paint-brush" style="color: var(--a1);"></i></div>
+                    <div class="skill-name">UI Design</div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fas fa-microscope" style="color: var(--a2);"></i></div>
+                    <div class="skill-name">UX Research</div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fas fa-pencil-ruler" style="color: var(--a1);"></i></div>
+                    <div class="skill-name">Wireframing</div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fas fa-layer-group" style="color: var(--a2);"></i></div>
+                    <div class="skill-name">Prototyping</div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fas fa-route" style="color: var(--a1);"></i></div>
+                    <div class="skill-name">User Flows</div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fas fa-bolt" style="color: var(--a4);"></i></div>
+                    <div class="skill-name">Interaction Design</div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fas fa-mobile-alt" style="color: var(--a1);"></i></div>
+                    <div class="skill-name">Mobile App Design</div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fas fa-universal-access" style="color: var(--a2);"></i></div>
+                    <div class="skill-name">Accessibility</div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fas fa-desktop" style="color: var(--a1);"></i></div>
+                    <div class="skill-name">Web Design</div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fas fa-brain" style="color: var(--a3);"></i></div>
+                    <div class="skill-name">Design Thinking</div>
+                </div>
+            </div>
+
+            <div class="reveal" style="margin-top: 3rem;">
+                <div class="section-label">Tools</div>
+                <div class="tools-grid">
+                    <div class="tool-pill"><span class="tool-icon"><i class="fab fa-figma" style="color:#F24E1E;"></i></span> Figma</div>
+                    <div class="tool-pill"><span class="tool-icon"><i class="fas fa-palette" style="color:#00C4CC;"></i></span> Canva</div>
+                    <div class="tool-pill"><span class="tool-icon"><i class="fas fa-rocket" style="color:var(--a1);"></i></span> Anti-gravity</div>
+                    <div class="tool-pill"><span class="tool-icon"><i class="fas fa-terminal" style="color:var(--text);"></i></span> Cursor</div>
+                    <div class="tool-pill"><span class="tool-icon"><i class="fas fa-robot" style="color:#10a37f;"></i></span> Cline</div>
+                    <div class="tool-pill"><span class="tool-icon"><i class="fas fa-code" style="color:#007ACC;"></i></span> VS Code</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ════ PROCESS ════ -->
+    <div style="background: var(--bg2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+        <div class="section">
+            <div class="reveal">
+                <div class="section-label">How I Work</div>
+                <h2 class="section-title">Design Process</h2>
+                <p class="section-desc">A structured, human-centred approach — every project follows this 8-stage
+                    framework.</p>
+            </div>
+            <div class="process-steps reveal">
+                <div class="process-step">
+                    <div class="step-num"><i class="fas fa-compass"></i></div>
+                    <div class="step-label">Discover</div>
+                    <div class="step-desc">Stakeholder interviews, market research</div>
+                </div>
+                <div class="process-step">
+                    <div class="step-num"><i class="fas fa-microscope"></i></div>
+                    <div class="step-label">Research</div>
+                    <div class="step-desc">User interviews, competitor analysis</div>
+                </div>
+                <div class="process-step">
+                    <div class="step-num"><i class="fas fa-bullseye"></i></div>
+                    <div class="step-label">Define</div>
+                    <div class="step-desc">Personas, problem statements, HMW</div>
+                </div>
+                <div class="process-step">
+                    <div class="step-num"><i class="fas fa-lightbulb"></i></div>
+                    <div class="step-label">Ideate</div>
+                    <div class="step-desc">Sketches, crazy 8s, brainstorm</div>
+                </div>
+                <div class="process-step">
+                    <div class="step-num"><i class="fas fa-object-group"></i></div>
+                    <div class="step-label">Wireframe</div>
+                    <div class="step-desc">Lo-fi layouts, information architecture</div>
+                </div>
+                <div class="process-step">
+                    <div class="step-num"><i class="fas fa-link"></i></div>
+                    <div class="step-label">Prototype</div>
+                    <div class="step-desc">Interactive hi-fi prototypes</div>
+                </div>
+                <div class="process-step">
+                    <div class="step-num"><i class="fas fa-shield-check" style="font-family: 'Font Awesome 6 Free'; font-weight: 900;">&#xf816;</i></div>
+                    <div class="step-label">Test</div>
+                    <div class="step-desc">Usability testing, AB experiments</div>
+                </div>
+                <div class="process-step">
+                    <div class="step-num"><i class="fas fa-rocket"></i></div>
+                    <div class="step-label">Deliver</div>
+                    <div class="step-desc">Developer handoff, design QA</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ════ PROJECTS ════ -->
+    <section id="projects">
+        <div class="section">
+            <div class="reveal">
+                <div class="section-label">Portfolio</div>
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-desc">My projects focus on creating user-friendly digital experiences through UI/UX
+                    design, AI-assisted workflows, and modern web-based solutions.</p>
+            </div>
+            <div class="projects-filter reveal">
+                <button class="filter-btn active" onclick="filterProj(this,'all')">All Work</button>
+                <button class="filter-btn" onclick="filterProj(this,'cybersecurity')">Cybersecurity</button>
+                <button class="filter-btn" onclick="filterProj(this,'web')">Web Design</button>
+                <button class="filter-btn" onclick="filterProj(this,'ai')">AI Tools</button>
+            </div>
+            <div class="projects-masonry reveal">
+                <!-- Cartoonizer Pro -->
+                <div class="proj-card col-6" data-cat="ai">
+                    <div class="proj-thumb">
+                        <div class="proj-thumb-bg" style="background: linear-gradient(135deg, #1a0a2e, #2d1060, #1a0a2e)">🎨</div>
+                        <div class="proj-overlay">
+                            <div class="proj-overlay-btns">
+                                <a href="https://cartoonizer-pro.vercel.app" target="_blank" class="proj-overlay-btn">Live Demo ↗</a>
+                                <a href="https://github.com/pillithehacker/cartoonizer-pro" target="_blank" class="proj-overlay-btn"><i class="fab fa-github"></i> GitHub Repo</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="proj-body">
+                        <div class="proj-cats"><span class="proj-cat">Web App</span><span class="proj-cat">Design</span></div>
+                        <div class="proj-title">Cartoonizer Pro</div>
+                        <p class="proj-desc">A modern AI Image Cartoonizer web application emphasizing seamless interface design, user journey planning, visual styling, premium glassmorphism layouts, and accessibility.</p>
+                        <div class="proj-meta">
+                            <div class="proj-meta-item"><span>Role</span><strong>UI/UX Designer</strong></div>
+                            <div class="proj-meta-item"><span>Tools</span><strong>Figma, Layout Planning, Visual Styling</strong></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Secure Cloud Data Storage -->
+                <div class="proj-card col-6" data-cat="cybersecurity">
+                    <div class="proj-thumb">
+                        <div class="proj-thumb-bg" style="background: linear-gradient(135deg, #0a0a1a, #0b192c, #0a0a1a); padding: 1.5rem; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; border-radius: var(--rL);">
+                            <div style="position: relative; z-index: 2; font-size: 3.5rem; color: #00f0ff; filter: drop-shadow(0 0 20px rgba(0, 240, 255, 0.5)); transform: translateY(-5px);"><i class="fas fa-cloud-lock" style="font-family: 'Font Awesome 6 Free'; font-weight: 900;"></i>&#xf023;</div>
+                            <i class="fas fa-shield-halved" style="position: absolute; top: 20%; left: 15%; font-size: 1.5rem; color: rgba(0, 240, 255, 0.4); filter: drop-shadow(0 0 10px rgba(0, 240, 255, 0.2));"></i>
+                            <i class="fas fa-file-shield" style="position: absolute; bottom: 25%; right: 15%; font-size: 1.8rem; color: rgba(0, 240, 255, 0.3); filter: drop-shadow(0 0 10px rgba(0, 240, 255, 0.2));"></i>
+                            <i class="fas fa-server" style="position: absolute; top: 25%; right: 20%; font-size: 1.2rem; color: rgba(0, 240, 255, 0.2);"></i>
+                            <i class="fas fa-key" style="position: absolute; bottom: 20%; left: 20%; font-size: 1.2rem; color: rgba(0, 240, 255, 0.2);"></i>
+                            <div style="position: absolute; width: 140px; height: 140px; background: radial-gradient(circle, rgba(0, 240, 255, 0.15), transparent 70%); border-radius: 50%; top: 50%; left: 50%; transform: translate(-50%, -50%);"></div>
+                        </div>
+                        <div class="proj-overlay">
+                            <div class="proj-overlay-btns">
+                                <a onclick="openSecureCloudModal()" class="proj-overlay-btn" style="cursor: pointer;">Case Study ↗</a>
+                                <a href="https://github.com/pillithehacker/Secure-Cloud-Data-Storage-Using-Hybrid-Encryption" target="_blank" class="proj-overlay-btn"><i class="fab fa-github"></i> GitHub Repo</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="proj-body">
+                        <div class="proj-cats"><span class="proj-cat">Cybersecurity</span><span class="proj-cat">Cloud Storage</span></div>
+                        <div class="proj-title">Secure Cloud Data Storage</div>
+                        <p class="proj-desc">Advanced-level cloud platform featuring hybrid encryption (AES + RSA), user role-based access control, file management, and robust security dashboard UI.</p>
+                        <div class="proj-meta">
+                            <div class="proj-meta-item"><span>Role</span><strong>Security Engineer & UI Developer</strong></div>
+                            <div class="proj-meta-item"><span>Tools</span><strong>Python, Cryptography, Modern UI, Flask</strong></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+    <!-- ════ CURRENTLY EXPLORING ════ -->
+    <div style="background: var(--bg2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+        <div class="section">
+            <div class="reveal">
+                <div class="section-label">Currently Exploring</div>
+                <h2 class="section-title">What's Next in Design</h2>
+            </div>
+            <div class="exploring-grid reveal">
+                <div class="explore-card">
+                    <div class="explore-icon"><i class="fas fa-robot" style="color: var(--a1);"></i></div>
+                    <div class="explore-title">AI Tools</div>
+                    <div class="explore-desc">Exploring AI-assisted design workflows, automation, and productivity tools</div>
+                </div>
+                <div class="explore-card">
+                    <div class="explore-icon"><i class="fas fa-brain" style="color: var(--a2);"></i></div>
+                    <div class="explore-title">AI Powered UI</div>
+                    <div class="explore-desc">Learning how AI can improve personalization and adaptive experiences</div>
+                </div>
+                <div class="explore-card">
+                    <div class="explore-icon"><i class="fas fa-pen-nib" style="color: var(--a3);"></i></div>
+                    <div class="explore-title">Adobe XD</div>
+                    <div class="explore-desc">Creating interactive prototypes, design systems, and UI concepts</div>
+                </div>
+                <div class="explore-card">
+                    <div class="explore-icon"><i class="fas fa-video" style="color: var(--a4);"></i></div>
+                    <div class="explore-title">Video Editing</div>
+                    <div class="explore-desc">Improving motion content, transitions, reels, and promotional edits</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ════ CONTACT ════ -->
+    <div class="contact-bg" id="contact">
+        <div class="contact-inner">
+            <div class="reveal">
+                <div class="section-label">Let's Talk</div>
+                <h2 class="contact-tagline">Let's build meaningful digital experiences together.</h2>
+                <p class="contact-sub">Whether you have a project in mind, want to collaborate, or just want to talk
+                    design — I'm all ears.</p>
+                <div class="contact-item">
+                    <div class="contact-icon-wrap"><i class="far fa-envelope"></i></div>
+                    <div><span class="contact-item-label">Email</span>
+                        <div class="contact-item-val">arunkumarpilli3@email.com</div>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon-wrap"><i class="fas fa-phone-alt"></i></div>
+                    <div><span class="contact-item-label">Phone</span>
+                        <div class="contact-item-val">+91 79819 47497</div>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon-wrap"><i class="fas fa-map-marker-alt"></i></div>
+                    <div><span class="contact-item-label">Location</span>
+                        <div class="contact-item-val">Kakinada, Andhra Pradesh</div>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon-wrap"><i class="far fa-clock"></i></div>
+                    <div><span class="contact-item-label">Availability</span>
+                        <div class="contact-item-val">Monday - Friday</div>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-form-card reveal">
+                <h3 style="font-family: var(--ff-head); font-weight: 700; font-size: 1.4rem; margin-bottom: 1.75rem;">
+                    Send a Message</h3>
+                <div class="form-row">
+                    <div class="fg"><label>First Name</label><input type="text" placeholder="Arun Kumar"></div>
+                    <div class="fg"><label>Last Name</label><input type="text" placeholder="Pilli"></div>
+                </div>
+                <div class="fg"><label>Email Address</label><input type="email" placeholder="arunkumarpilli3@email.com"></div>
+                <div class="fg">
+                    <label>Project Type</label>
+                    <select>
+                        <option>Select project type...</option>
+                        <option>UI/UX Design</option>
+                        <option>Web Application</option>
+                        <option>Cybersecurity Analysis</option>
+                        <option>Cloud Infrastructure</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+                <div class="fg">
+                    <label>Budget Range</label>
+                    <select>
+                        <option>Under ₹50k</option>
+                        <option>₹50k – ₹1.5L</option>
+                        <option>₹1.5L – ₹3L</option>
+                        <option>₹3L+</option>
+                    </select>
+                </div>
+                <div class="fg"><label>Message</label><textarea rows="5"
+                        placeholder="Tell me about your project, goals, and timeline..."></textarea></div>
+                <button class="submit-btn" onclick="handleSubmit(this)">Send Message ✦</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-inner">
+            <div>
+                <div
+                    style="font-family: var(--ff-head); font-size: 1.1rem; font-weight: 700; background: linear-gradient(135deg, var(--a1), var(--a2)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 4px;">
+                    Arun Kumar Pilli</div>
+                <p style="color: var(--muted); font-size: 0.8rem;">Cybersecurity Graduate & UI/UX Designer
+                </p>
+            </div>
+            <p style="color: var(--subtle); font-size: 0.78rem;">© 2026 Arun Kumar Pilli. Crafted with passion.</p>
+            <div class="footer-socials">
+                <a href="https://www.linkedin.com/in/arunkumar-pilli" target="_blank" class="footer-social" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/pillithehacker" target="_blank" class="footer-social" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.instagram.com/arun_public" target="_blank" class="footer-social" title="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ════ PROJECT MODAL ════ -->
+    <div id="projectModal" class="modal-overlay" onclick="if(event.target === this) closeModal()">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">×</button>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <!-- OS Native Cursor Kept Intact -->
+
+    <script src="script.js"></script>
+</body>
+
+</html>
