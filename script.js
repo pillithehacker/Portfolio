@@ -20,11 +20,22 @@ for (let i = 0; i < 30; i++) {
     pc.appendChild(p);
 }
 
-/* ── NAV SCROLL ── */
+/* ── NAV SCROLL & PROGRESS ── */
 const nav = document.getElementById('nav');
 const sections = document.querySelectorAll('#hero, #about, #skills, #projects, #blog, #contact');
+const scrollProgress = document.getElementById('scrollProgress');
+
 window.addEventListener('scroll', () => {
     nav.classList.toggle('scrolled', window.scrollY > 30);
+    
+    // Scroll Progress Logic
+    if (scrollProgress) {
+        let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        let scrolled = (winScroll / height) * 100;
+        scrollProgress.style.width = scrolled + "%";
+    }
+
     sections.forEach(s => {
         const rect = s.getBoundingClientRect();
         if (rect.top <= 100 && rect.bottom >= 100) {
