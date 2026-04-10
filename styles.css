@@ -808,11 +808,11 @@ footer p{color:var(--muted);font-size:.82rem}
     
     /* About Section Flow & Typography */
     .section, .section-full { padding: 3.5rem 6vw; }
-    .mobile-label { display: block; margin-bottom: 1.75rem; text-align: center; }
+    .mobile-label { display: block !important; margin-bottom: 1.75rem; text-align: center; order: 1; width: 100%; }
     .desktop-label { display: none; }
     .about-grid { display: flex; flex-direction: column; gap: 0; align-items: center; }
-    .about-image-card { width: 100%; max-width: 250px; margin: 0 auto 2.25rem; display: flex; justify-content: center; }
-    .about-content { display: flex; flex-direction: column; align-items: center; text-align: center; width: 100%; }
+    .about-image-card { width: 100%; max-width: 250px; margin: 0 auto 2.25rem; display: flex; justify-content: center; order: 2; height: 250px; }
+    .about-content { display: flex; flex-direction: column; align-items: center; text-align: center; width: 100%; order: 3; }
     .section-title { font-size: clamp(1.6rem, 8vw, 2.2rem); margin-bottom: 1.25rem; text-align: center; }
     .about-text { font-size: 0.85rem; line-height: 1.6; margin-bottom: 1rem; width: 100%; max-width: 95%; text-align: center; }
     .philosophy-card { padding: 1.25rem; margin: 1rem auto 1.5rem; width: 100%; max-width: 90%; background: rgba(255,255,255,0.03); backdrop-filter: blur(10px); border-radius: 16px; text-align: center; }
