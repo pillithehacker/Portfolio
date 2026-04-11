@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartoonizer Pro - Screenshots | Arun Kumar Pilli</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;600&family=Sora:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='80' font-family='sans-serif' font-size='80' font-weight='800' fill='%2300f0ff'>A</text></svg>">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    
+    <div id="scrollProgress"></div>
+
+
+
+    <!-- GALLERY PAGE WRAPPER -->
+    <div class="gallery-page-wrap">
+        <div class="gallery-header">
+            <a href="index.html#projects" class="btn-back"><i class="fas fa-arrow-left"></i> Back to Portfolio</a>
+            <h1 class="section-title">Cartoonizer Pro</h1>
+            <p class="section-desc" style="margin: 0 auto;">A modern AI Image Cartoonizer web application highlighting seamless interface design and user journey layouts. Browse the full high-fidelity mockups below.</p>
+        </div>
+
+        <div class="gallery-grid">
+            <div class="gallery-card" onclick="openGalleryModal(this)">
+                <div class="gallery-img-container">
+                    <img src="assets/images/cartoonizer/Home Page.png" alt="Home Page">
+                </div>
+                <div class="gallery-title">Home Page</div>
+            </div>
+            
+            <div class="gallery-card" onclick="openGalleryModal(this)">
+                <div class="gallery-img-container">
+                    <img src="assets/images/cartoonizer/Review Section.png" alt="Review Section">
+                </div>
+                <div class="gallery-title">Review Section</div>
+            </div>
+            
+            <div class="gallery-card" onclick="openGalleryModal(this)">
+                <div class="gallery-img-container">
+                    <img src="assets/images/cartoonizer/Styles.png" alt="Styles">
+                </div>
+                <div class="gallery-title">Styles</div>
+            </div>
+            
+            <div class="gallery-card" onclick="openGalleryModal(this)">
+                <div class="gallery-img-container">
+                    <img src="assets/images/cartoonizer/Creation Section.png" alt="Creation Section">
+                </div>
+                <div class="gallery-title">Creation Section</div>
+            </div>
+            
+            <div class="gallery-card" onclick="openGalleryModal(this)">
+                <div class="gallery-img-container">
+                    <img src="assets/images/cartoonizer/Cartoonize Page.png" alt="Cartoonize Page">
+                </div>
+                <div class="gallery-title">Cartoonize Page</div>
+            </div>
+            
+            <div class="gallery-card" onclick="openGalleryModal(this)">
+                <div class="gallery-img-container">
+                    <img src="assets/images/cartoonizer/Developers Page.png" alt="Developers Page">
+                </div>
+                <div class="gallery-title">Developers Page</div>
+            </div>
+            
+            <div class="gallery-card" onclick="openGalleryModal(this)">
+                <div class="gallery-img-container">
+                    <img src="assets/images/cartoonizer/Stack Page.png" alt="Stack Page">
+                </div>
+                <div class="gallery-title">Stack Page</div>
+            </div>
+            
+            <div class="gallery-card" onclick="openGalleryModal(this)">
+                <div class="gallery-img-container">
+                    <img src="assets/images/cartoonizer/Output.png" alt="Output">
+                </div>
+                <div class="gallery-title">Output</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-inner">
+            <div>
+                <div
+                    style="font-family: var(--ff-head); font-size: 1.1rem; font-weight: 700; background: linear-gradient(135deg, var(--a1), var(--a2)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 4px;">
+                    Arun Kumar Pilli</div>
+                <p style="color: var(--muted); font-size: 0.8rem;">Cybersecurity Graduate & UI/UX Designer
+                </p>
+            </div>
+            <p style="color: var(--subtle); font-size: 0.78rem;">© 2026 Arun Kumar Pilli. Crafted with passion.</p>
+            <div class="footer-socials">
+                <a href="https://www.linkedin.com/in/arunkumar-pilli" target="_blank" class="footer-social"
+                    title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/pillithehacker" target="_blank" class="footer-social" title="GitHub"><i
+                        class="fab fa-github"></i></a>
+                <a href="https://www.instagram.com/arun_public" target="_blank" class="footer-social"
+                    title="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODAL FOR GALLERY -->
+    <div id="galleryModal" class="modal-overlay" onclick="if(event.target === this) closeGalleryModal()">
+        <div class="modal-content" style="padding: 1rem; max-width: 90vw; background: transparent; border: none; box-shadow: none;">
+            <button class="modal-close" onclick="closeGalleryModal()" style="top: 0; right: 0; background: rgba(0,0,0,0.5);">&times;</button>
+            <img id="galleryModalImg" src="" alt="Fullscreen preview" style="width: 100%; border-radius: 12px; box-shadow: 0 10px 40px rgba(0,240,255,0.2);">
+        </div>
+    </div>
+
+    <!-- SCRIPT -->
+    <script>
+        // Simple loader hiding logic
+        window.addEventListener('load', () => {
+            const loader = document.getElementById('loader');
+            if(loader) loader.classList.add('hide');
+        });
+        
+        // Navigation toggle
+        function toggleMenu() {
+            const menu = document.getElementById('mobileMenu');
+            const hamburger = document.getElementById('hamburger');
+            if (menu) menu.classList.toggle('open');
+            if (hamburger) hamburger.classList.toggle('open');
+        }
+        
+        // Custom Gallery Modal
+        function openGalleryModal(card) {
+            const imgSrc = card.querySelector('img').src;
+            const modal = document.getElementById('galleryModal');
+            const modalImg = document.getElementById('galleryModalImg');
+            
+            modalImg.src = imgSrc;
+            modal.classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closeGalleryModal() {
+            const modal = document.getElementById('galleryModal');
+            modal.classList.remove('open');
+            document.body.style.overflow = 'auto';
+        }
+        
+        // Scroll Progress
+        window.addEventListener("scroll", () => {
+            let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            let scrolled = (winScroll / height) * 100;
+            const prog = document.getElementById("scrollProgress");
+            if(prog) prog.style.width = scrolled + "%";
+            
+            // Nav sticky background
+            const nav = document.getElementById('nav');
+            if(nav) {
+                if (window.scrollY > 50) nav.classList.add('scrolled');
+                else nav.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>
